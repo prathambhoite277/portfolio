@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prathamesh Bhoite | Portfolio</title>
-    <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
         :root {
@@ -18,8 +16,6 @@
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             scroll-behavior: smooth;
         }
-
-        /* Glassmorphism Cards */
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
@@ -40,7 +36,6 @@
             box-shadow: 0 12px 30px var(--primary-glow) !important;
         }
 
-        /* Hero Image Glow Ring (Enlarged) */
      .hero-avatar {
             width: 260px;
             height: 390px;
@@ -54,7 +49,6 @@
 }
         }
 
-        /* Timeline Styling */
         .timeline {
             border-left: 2px solid var(--primary-accent);
             padding-left: 20px;
@@ -78,7 +72,6 @@
             box-shadow: 0 0 10px var(--primary-accent);
         }
 
-        /* Social Icon Pills */
         .social-btn {
             width: 42px;
             height: 42px;
@@ -98,7 +91,6 @@
 </head>
 <body class="bg-body-tertiary text-body">
 
-    <!-- Bootstrap Toasts for Feedback -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
         <div id="successToast" class="toast text-bg-success glass-card border" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header text-bg-success border-0">
@@ -122,7 +114,6 @@
         </div>
     </div>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top bg-body border-bottom">
         <div class="container">
             <a class="navbar-brand fw-bold font-monospace text-primary fs-4" href="#">&lt;Prathamesh.dev /&gt;</a>
@@ -147,7 +138,6 @@
         </div>
     </nav>
 
-    <!-- Hero Banner -->
     <section id="about" class="py-5">
         <div class="container py-4">
             <div class="row align-items-center gy-4">
@@ -162,11 +152,11 @@
                         Information Technology student at Atharva College of Engineering, passionate about building responsive web interfaces, algorithm design, and database administration with MS SQL Server.
                     </p>
                     
-                    <!-- Social Links -->
+            
                     <div class="d-flex gap-2 mb-4">
                         <a href="https://github.com/prathambhoite277" target="_blank" class="social-btn border text-body" title="GitHub"><i class="bi bi-github fs-5"></i></a>
                         <a href="https://www.linkedin.com/in/prathamesh-bhoite-861607270?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn border text-body" title="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
-                        <!-- Email Popup Trigger Button -->
+            
                         <button type="button" class="social-btn border text-body bg-transparent" data-bs-toggle="modal" data-bs-target="#emailModal" title="Contact Email">
                             <i class="bi bi-envelope-fill fs-5"></i>
                         </button>
@@ -181,7 +171,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+
     <section id="skills" class="py-5 bg-body-secondary">
         <div class="container">
             <h2 class="fw-bold mb-4 text-center"><i class="bi bi-code-slash text-primary me-2"></i>Technical Skills</h2>
@@ -218,7 +208,6 @@
         </div>
     </section>
 
-    <!-- Timeline / Education Section -->
     <section id="timeline" class="py-5">
         <div class="container" style="max-width: 800px;">
             <h2 class="fw-bold mb-4"><i class="bi bi-journal-bookmark text-primary me-2"></i>Education</h2>
@@ -244,7 +233,6 @@
         </div>
     </section>
 
-    <!-- Featured Projects -->
     <section id="projects" class="py-5 bg-body-secondary">
         <div class="container">
             <h2 class="fw-bold mb-4 text-center"><i class="bi bi-folder-check text-primary me-2"></i>Featured Projects</h2>
@@ -303,7 +291,6 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
     <section id="contact" class="py-5">
         <div class="container" style="max-width: 650px;">
             <div class="glass-card p-4 p-md-5">
@@ -330,7 +317,6 @@
         </div>
     </section>
 
-    <!-- Email Modal Popup -->
     <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content glass-card border">
@@ -357,25 +343,20 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="py-4 border-top text-center bg-body">
         <div class="container">
             <p class="text-body-secondary small mb-0">&copy; 2026 Prathamesh Bhoite. Built with HTML, CSS, and Bootstrap 5.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- EmailJS Initialization -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        // Replace YOUR_PUBLIC_KEY with your EmailJS Public Key (Account -> Account Details)
         emailjs.init("lUVgkwgCFhXhX2V0y");
     </script>
 
     <script>
-        // Theme Switcher Logic
         const themeToggle = document.getElementById('themeToggle');
         const htmlElement = document.documentElement;
         const sunIcon = document.getElementById('sunIcon');
@@ -394,7 +375,6 @@
             }
         });
 
-        // EmailJS Integration Logic using service_y4zccdh
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const successToastEl = document.getElementById('successToast');
@@ -409,7 +389,6 @@
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
             submitBtn.disabled = true;
 
-            // Replace YOUR_TEMPLATE_ID with your EmailJS Template ID
             emailjs.sendForm('service_ozqmzeb', 'template_i6szpeb', this)
                 .then(function() {
                     successToast.show();
